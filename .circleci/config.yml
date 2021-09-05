@@ -1,0 +1,30 @@
+version: 2.1
+
+jobs:
+  test:
+    machine:
+      image: "ubuntu-1604:202004-01"
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: npm i && npm run test
+  deploy:
+    machine:
+      image: "ubuntu-1604:202004-01"
+    steps:
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh ubuntu@52.20.33.155 'cd ./sports-app && git pull && nvm i && nvm use && npm i && npx sequelize-cli db:migrate && npm run production'
+
+workflows:
+  test-and-deploy:
+    jobs: 
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master # only deploy on the master branch

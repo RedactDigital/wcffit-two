@@ -1,0 +1,35 @@
+
+# version: 2.1
+
+# jobs:
+#   build-app:
+#     machine:
+#       image: "ubuntu-1604:202004-01"
+#     steps:
+#       - checkout
+#       - run:
+#           name: Installing AWS CLI
+#           command: |
+#             sudo apt-get update
+#             sudo apt install python3-pip
+#             sudo pip3 install awsebcli --upgrade
+#       - run: 
+#           name: Build Application
+#           command: cd ./var/lib/app && npm i && npm run build
+#       - run: 
+#           name: Sync to S3 Bucket
+#           command: aws s3 sync ./var/lib/app/build s3://ci-cd-example
+#   test-app:
+#     machine:
+#       image: "ubuntu-1604:202004-01"
+#     steps:
+#       - checkout
+#       - run:
+#           name: Installing AWS CLI
+#           command: npm run test
+
+# workflows:
+#   build-and-test:
+#     jobs: 
+#       - build-app
+#       - test-app

@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn-h1-spacing {
+	margin-top: 18px;
+}
+
+.form-spacing-top {
+	margin-top: 30px;
+}
+
+.seperate-background {
+	background-color: #ddd;
+	padding: 25px;
+}
+
+.seperate-background h2 span{
+	color: #000;
+}
+
+.seperate-background h4 {
+	color: #000;
+}
+.seperate-background p{
+	color: #000;
+}
+
+.seperate-background-margin {
+	background-color: #ddd;
+	padding: 25px;
+	margin-top: 25px;
+}
+
+.seperate-background-margin h2 span{
+	color: #000
+}
+
+.seperate-background-margin p{
+	color: #000
+}
+
+.seperate-background-margin h4 a{
+	color: #000
+}

@@ -1,0 +1,89 @@
+<header class="main__header">
+	<div class="container">
+		<nav class="navbar navbar-default"> 
+			<!-- Brand and toggle get grouped for better mobile display --> 
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="navbar-header">
+				<h1 class="navbar-brand revealOnScroll" data-animation="fadeInDown" data-timeout="250">
+					<a href="/"><img src="../images/logo2.jpg" alt=""/></a></h1>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+			</div>
+			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav nav-justified">
+					<li>
+			    		<a href="/">Home</a>
+				    </li>					          
+					<li class="dropdown 
+						<% if (name === 'About' || name === 'Rates') { %>
+							active
+						<% } %>
+					">
+						<div class="dropper"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/about">About Us</a>
+								</li>
+								<li>
+									<a href="/rates">Rates</a>
+								</li>                  
+							</ul>
+						</div>
+					</li>
+					<li class="dropdown 
+						<% if (name === 'Classes' || name === 'Class Description') { %>
+							active
+						<% } %>
+					">
+						<div class="dropper"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Classes</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/classes">Class Calendar</a>
+								</li>
+								<li>
+									<a href="/classdescription">Class Descriptions</a>
+								</li>                  
+							</ul>
+						</div>
+					</li>
+					<li <% if (name === 'Gallery') { %>class="active"<% } %>>
+						<a href="/gallery">Gallery</a>
+					</li>
+					<li class="dropdown 
+					<% if (name === 'Trainers' || name === 'Rules' || name === 'Child Care Rules' || name === 'Child Watch Hours' || name === 'Staff Hours' || name === 'Contact') { %>
+						active
+					<% } %>
+				">
+						<div class="dropper"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/trainers">Trainers</a>
+								</li>
+								<li>
+									<a href="/rules">Gym Rules</a>
+								</li>
+								<li>
+									<a href="/childrules">Child Watch Rules</a>
+								</li>
+								<li>
+									<a href="/childhours">Child Watch Hours</a>
+								</li>
+								<li>
+									<a href="/staffhours">Staffed Hours</a>
+								</li>
+                                <li>
+									<a href="/contact">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					
+					<li>
+						<a href="/login">Login</a>
+					</li>
+					
+				</ul>
+			</div>
+			<!-- /.navbar-collapse --> 
+		</nav>
+	</div>
+</header>
