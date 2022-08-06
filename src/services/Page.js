@@ -32,7 +32,7 @@ class Page {
       html: msg,
     };
     try {
-      const email = await mailgun.messages().send(data);
+      // const email = await mailgun.messages().send(data);
       log.info(`"${data.subject}" email sent successfully to "${data.to}"`);
     } catch (e) {
       log.error(e);
