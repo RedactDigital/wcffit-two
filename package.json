@@ -18,7 +18,6 @@
   "author": "Patrick Rizzardi",
   "license": "ISC",
   "dependencies": {
-    "@bull-board/express": "^3.5.4",
     "autoprefixer": "^10.2.5",
     "bcrypt": "^5.0.0",
     "bull": "^3.29.1",
@@ -31,13 +30,8 @@
     "mailgun-js": "^0.22.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.4",
-    "passport": "^0.4.1",
-    "passport-facebook": "^3.0.0",
-    "passport-google-oauth": "^2.0.0",
-    "passport-jwt": "^4.0.0",
     "sequelize": "^6.3.4",
     "serve-favicon": "^2.5.0",
-    "snyk": "^1.377.1",
     "uuid": "^8.3.2",
     "winston": "^3.3.3"
   },
@@ -55,6 +49,5 @@
     "prettier": "^2.2.1",
     "sequelize-cli": "^6.2.0",
     "sequelize-mock": "^0.10.2"
-  },
-  "snyk": true
+  }
 }

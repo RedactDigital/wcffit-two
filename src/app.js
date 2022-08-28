@@ -7,8 +7,8 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 //passport middleware
-const passport = require('passport');
-app.use(passport.initialize());
+// const passport = require('passport');
+// app.use(passport.initialize());
 // require('./middleware/passport/authentication')(passport);
 
 app
