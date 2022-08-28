@@ -31,9 +31,9 @@ Object.keys(db).forEach(modelName => {
 async () => {
   try {
     await sequelize.authenticate();
-    log.info('Connection has been established successfully.');
+    console.log('Connection has been established successfully.');
   } catch (error) {
-    log.error('Unable to connect to the database:', error);
+    console.error('Unable to connect to the database:', error);
   }
 };
 

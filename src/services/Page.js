@@ -35,7 +35,7 @@ class Page {
       // const email = await mailgun.messages().send(data);
       // log.info(`"${data.subject}" email sent successfully to "${data.to}"`);
     } catch (e) {
-      log.error(e);
+      console.error(e);
     }
     return res.render('index', { title: `${name} | ${appTitle}`, name, content, sent: true });
   }
