@@ -1,5 +1,5 @@
 const { getPage } = require('../lib/Page');
-const mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_API_URL });
+// const mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_API_URL });
 const Logger = require('../../src/middleware/Logger');
 const log = new Logger();
 
@@ -33,7 +33,7 @@ class Page {
     };
     try {
       // const email = await mailgun.messages().send(data);
-      log.info(`"${data.subject}" email sent successfully to "${data.to}"`);
+      // log.info(`"${data.subject}" email sent successfully to "${data.to}"`);
     } catch (e) {
       log.error(e);
     }
