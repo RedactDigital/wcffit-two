@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  app:
+    depends_on:
+      - mysql
+    image: node:20.0-bullseye-slim
+    user: node:node
+    container_name: wcffit
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    command: sh -c "npm i && npm start"
+    ports:
+      - '5000:5000'
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - wcffit
+
+  wcffit-mysql:
+    image: mysql:8.0.26
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wcffit
+      MYSQL_USER: app
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./storage/mysql:/var/lib/mysql
+    networks:
+      - wcffit
+
+networks:
+  wcffit:
+    driver: bridge
