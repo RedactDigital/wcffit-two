@@ -2,7 +2,7 @@ version: '3.9'
 services:
   app:
     depends_on:
-      - mysql
+      - wcffit-mysql
     image: node:20.0-bullseye-slim
     user: node:node
     container_name: wcffit
@@ -10,7 +10,7 @@ services:
     working_dir: /usr/src/app
     command: sh -c "npm i && npm start"
     ports:
-      - '5000:5000'
+      - '3000:5000'
     volumes:
       - .:/usr/src/app
     networks:
