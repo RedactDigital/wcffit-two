@@ -18,6 +18,9 @@ class Page {
 
   static async uri(req, res) {
     try {
+      if(req.url === '/healthcheck') {
+        return res.status(200).json('OK');
+      }
       const { content, name } = await getPage(req.url);
       return res.render('index', { title: `${name} | ${appTitle}`, name, content });
     } catch (error) {
